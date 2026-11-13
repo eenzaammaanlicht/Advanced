@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Save Data to Local Storage</title>
+</head>
+<body>
+<h1>Save Data to Local Storage</h1>
+
+<form id="dataForm">
+    <label for="inputData">Enter Data:</label>
+    <input type="text" id="inputData" required>
+    <button type="submit">Save</button>
+</form>
+
+<div id="message"></div>
+
+<script>
+const dataForm = document.getElementById("dataForm");
+const inputField = document.getElementById("inputData");
+const messageDiv = document.getElementById("message");
+
+dataForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    const inputData = inputField.value;
+    
+    if (inputData.trim() === "") {
+        messageDiv.textContent = "Please enter some data";
+    } else {
+        localStorage.setItem("savedData", inputData);
+        messageDiv.textContent = "Data saved successfully!";
+        inputField.value = "";
+    }
+});
+</script>
+</body>
+</html>

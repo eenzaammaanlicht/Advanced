@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Computer Store</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="laptop.html">Laptops</a>
+            <a href="desktop.html">Desktops</a>
+            <a href="tablet.html">Tablets</a>
+            <a href="smartphone.html">Smartphones</a>
+            <a href="register.html">Register</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <div class="container" id="product-list">
+        <!-- Danh sách sản phẩm sẽ được thêm vào đây từ JavaScript -->
+    </div>
+
+    <div class="cart-container">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <button onclick="clearCart()">Clear Cart</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
